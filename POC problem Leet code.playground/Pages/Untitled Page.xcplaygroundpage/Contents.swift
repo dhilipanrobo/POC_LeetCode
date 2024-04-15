@@ -29,7 +29,7 @@ print(twoSum([2,7,11,15], 9))
 
 
 func concatenateNumbe (_ input:[Int])-> Int{
-    var  concatenateNumbe = 0
+    var concatenateNumbe = 0
     
     for num in input.reversed() {
     concatenateNumbe =  concatenateNumbe * 10
@@ -57,3 +57,15 @@ let l2 = concatenateNumbe([5,6,4])
 
 
 print(reverseNum(l1 + l2))  // Ans : [7,0,8]
+
+
+
+class Solution {
+    func isPalindrome(_ x: Int) -> Bool {
+       
+        return true
+    }
+}
+
+let solution = Solution()
+solution.isPalindrome(123)
