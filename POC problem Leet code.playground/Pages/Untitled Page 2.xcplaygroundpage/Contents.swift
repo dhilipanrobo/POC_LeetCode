@@ -2,6 +2,12 @@
 
 import Foundation
 
-var greeting = "Hello, playground"
+var count = 123
+var res = 0
 
-//: [Next](@next)
+while count != 0 {
+    res =   (count % 10) + (res * 10 )
+    count /= 10
+}
+
+print("* \(res)")

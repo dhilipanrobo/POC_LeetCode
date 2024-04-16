@@ -62,10 +62,44 @@ print(reverseNum(l1 + l2))  // Ans : [7,0,8]
 
 class Solution {
     func isPalindrome(_ x: Int) -> Bool {
+        
+        guard  x > 0 else{
+            return false
+        }
+        
+        var temp = x
+        var ans = 0
+        
+        while temp != 0 {
+            ans = (ans * 10 )+( temp % 10  )
+            temp /= 10
+        }
        
-        return true
+        return ans == x
+       
     }
+    
+    func isPalindromeString(_ x:String)-> Bool {
+        let subString = x
+        var charString = [Character]()
+        var revString = [String]()
+        for char in subString {
+            
+            charString.append(char)
+        }
+       
+        while let char = charString.popLast() {
+            revString.append(String(char))
+        }
+        
+        return subString == revString.joined()
+    }
+    
+   
 }
 
 let solution = Solution()
-solution.isPalindrome(123)
+print(" is Palindrome Num : \(solution.isPalindrome(111))")
+print(" is Palindrome String : \(solution.isPalindromeString("aba"))")
+
+
